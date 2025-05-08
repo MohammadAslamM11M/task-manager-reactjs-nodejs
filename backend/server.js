@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://your-netlify-site.netlify.app",
+    origin: "https://task-manager-app-by-aslam.netlify.app",
     credentials: true,
   })
 );
