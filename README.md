@@ -124,3 +124,12 @@ The backend will be available at http://localhost:5000.
 
 Additional Notes:
 Ensure that MongoDB is running locally or connect to a MongoDB Atlas cluster.
+
+Register & login using these credentials to see seeded data or you create your own.
+user:
+email: user
+password: user123
+
+admin:
+email: admin
+password: admin123
