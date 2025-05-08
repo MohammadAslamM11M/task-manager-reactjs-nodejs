@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://task-manager-app-aslam-api.onrender.com/api/auth/login",
         loginFormData
       );
       localStorage.setItem("token", response.data.token);
