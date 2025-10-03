@@ -14,7 +14,8 @@ const TaskForm = ({ token, onTaskAdded }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://task-manager-app-aslam-api.onrender.com/api/tasks", formData, {
+    // await axios.post("https://task-manager-app-aslam-api.onrender.com/api/tasks", formData, {
+    await axios.post("/api/tasks", formData, {
       headers: { Authorization: `Bearer ${token}` },
     });
     onTaskAdded();

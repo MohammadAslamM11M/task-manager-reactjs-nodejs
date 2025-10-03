@@ -5,7 +5,8 @@ const useTasks = (token) => {
   const [tasks, setTasks] = useState([]);
 
   const fetchAllTasks = async () => {
-    const response = await axios.get("https://task-manager-app-aslam-api.onrender.com/api/tasks", {
+    // const response = await axios.get("https://task-manager-app-aslam-api.onrender.com/api/tasks", {
+    const response = await axios.get("/api/tasks", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setTasks(response.data);

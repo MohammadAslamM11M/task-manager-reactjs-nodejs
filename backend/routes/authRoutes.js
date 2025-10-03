@@ -6,6 +6,7 @@ const User = require("../models/User");
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
+  debugger;
   const { email, password } = req.body;
   const hashed = await bcrypt.hash(password, 10);
   try {
@@ -17,6 +18,7 @@ router.post("/register", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  debugger;
   const { email, password } = req.body;
   const user = await User.findOne({ email });
   if (!user || !(await bcrypt.compare(password, user.password)))

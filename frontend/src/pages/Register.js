@@ -20,7 +20,8 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://task-manager-app-aslam-api.onrender.com/api/auth/register",
+        // "https://task-manager-app-aslam-api.onrender.com/api/auth/register",
+        "/api/auth/register",
         registerFormData
       );
       navigate(`/login`);

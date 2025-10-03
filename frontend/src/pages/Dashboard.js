@@ -20,7 +20,8 @@ const Dashboard = () => {
 
   const updateTask = async (task) => {
     await axios.patch(
-      `https://task-manager-app-aslam-api.onrender.com/api/tasks/${task._id}`,
+      // `https://task-manager-app-aslam-api.onrender.com/api/tasks/${task._id}`,
+      `/api/tasks/${task._id}`,
       {
         status: task.status === "complete" ? "incomplete" : "complete",
       },
@@ -32,7 +33,8 @@ const Dashboard = () => {
   };
 
   const deleteTask = async (id) => {
-    await axios.delete(`https://task-manager-app-aslam-api.onrender.com/api/tasks/${id}`, {
+    // await axios.delete(`https://task-manager-app-aslam-api.onrender.com/api/tasks/${id}`, {
+    await axios.delete(`/api/tasks/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchAllTasks();
